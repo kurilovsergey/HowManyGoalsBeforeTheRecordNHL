@@ -2,6 +2,7 @@ import React from "react";
 import Tick from "@pqina/flip";
 import "@pqina/flip/dist/flip.min.css";
 
+//код взять со стороннего ресурса
 
 export class Flip extends React.Component {
   constructor(props) {

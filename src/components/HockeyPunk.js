@@ -2,7 +2,7 @@ import hockey_puck from './assets/hockey-puck.png'
 import s from './HockeyPunk.module.css'
 
 export const HockeyPunk = (props) => {
-    let arr = new Array(props.goalOvi).fill({});
+    let arr = new Array(props.difference).fill({});
     
  return (
   <>
