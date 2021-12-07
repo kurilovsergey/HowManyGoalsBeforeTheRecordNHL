@@ -8,8 +8,8 @@ export const Logo = (rops) => {
  return (
   <>
     <div className={s.logo_block}>
-    <img className={s.logoNHL} src={NHL_logo}/>
-     <img className={s.logoWC} src={WC_logo}/>
+    <img className={s.logoNHL} alt="logo NHL" src={NHL_logo}/>
+     <img className={s.logoWC} alt="logo washington capitals" src={WC_logo}/>
      </div>
   </>
  )
