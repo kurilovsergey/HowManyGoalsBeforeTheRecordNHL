@@ -20,7 +20,6 @@ export const ScoresToday = (props) => {
   <div className={s.scorestoday}>
    {lastScore.date==currentDate || lastScore.goal>0 ? <div>Ovechkin scored {lastScore.goal} goal(s) today</div> : null}
   </div>
-  
   </>
  )
 }

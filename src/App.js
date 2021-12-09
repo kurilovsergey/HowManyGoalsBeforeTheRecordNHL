@@ -4,6 +4,7 @@ import {HockeyPunk} from './components/HockeyPunk'
 import {Logo} from './components/Logo'
 import {StatTable} from './components/StatTable'
 import {ScoresToday} from './components/ScoresToday'
+import {Footer} from './components/Footer'
 import React, { useState, useEffect } from 'react';
 const axios = require('axios');
 
@@ -32,15 +33,6 @@ function App() {
 
   })
   
-  axios.get('https://ipapi.co/json/')
-  .then((resp) => {
-    let data = resp.data;
-    //console.log(data.country)
-    //data.country=="RU" ? setENG(false) : null
-    //console.log(data)
-    setIsEng(true)
-    console.log(isEng)
-})
 
 axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLog&season='+CurrentSeason)
 .then((response) => {
@@ -59,13 +51,15 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
   let [goalOvi, setOviGoals] = useState(null)
   let [gamesOvi, setOviGames] = useState(null)
   let [LastGoal, setDateLastGoal] = useState({date: null,  goals: null})
-  let [isEng, setIsEng] = useState(true)
+  
   
   
   let difference = goalGretsky - goalOvi
 
   return (
     <div className="App">
+      {/* <button>🇷🇺</button>
+      <button>🇬🇧</button> */}
       <header>
       </header>
       <main className="App-header">
@@ -75,12 +69,9 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
         <StatTable goalOvi={goalOvi} gamesOvi={gamesOvi}/>
         <ScoresToday LastGoal={LastGoal}/>
       </main>
-      <footer>
-      <hr/>
-        <div><a href="https://www.instagram.com/kurilovsergey/">Made by Kurilov Sergey ❄️</a></div>
-        <div>For partnership agreement, development and marketing write to kurilovsergey7@gmail.com</div>
-      
-      </footer>
+      <footer className="footer">
+      <Footer isRuss={isRuss}/>
+       </footer>
     </div>
   );
 }

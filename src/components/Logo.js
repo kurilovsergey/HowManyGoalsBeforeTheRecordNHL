@@ -2,7 +2,7 @@ import NHL_logo from './assets/NHL_logo.png'
 import WC_logo from './assets/WC_logo.png'
 import s from './Logo.module.css'
 
-export const Logo = (rops) => {
+export const Logo = () => {
     
     
  return (
