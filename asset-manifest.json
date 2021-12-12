@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.81a97add.chunk.css",
-    "main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.24d3e41d.chunk.js",
-    "main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.24d3e41d.chunk.js.map",
+    "main.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.6172806a.chunk.css",
+    "main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.3001290a.chunk.js",
+    "main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.3001290a.chunk.js.map",
     "runtime-main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/runtime-main.d03ab0fc.js",
     "runtime-main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/runtime-main.d03ab0fc.js.map",
     "static/css/2.f45cf02a.chunk.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/2.f45cf02a.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.feb60a80.chunk.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/3.feb60a80.chunk.js.map",
     "index.html": "/HowManyGoalsBeforeTheRecordNHL/index.html",
     "static/css/2.f45cf02a.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/2.f45cf02a.chunk.css.map",
-    "static/css/main.81a97add.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.81a97add.chunk.css.map",
+    "static/css/main.6172806a.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.6172806a.chunk.css.map",
     "static/js/2.64f4edb3.chunk.js.LICENSE.txt": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.64f4edb3.chunk.js.LICENSE.txt",
     "static/media/NHL_logo.adaa40a4.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/NHL_logo.adaa40a4.png",
     "static/media/WC_logo.aea12137.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/WC_logo.aea12137.png"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.d03ab0fc.js",
     "static/css/2.f45cf02a.chunk.css",
     "static/js/2.64f4edb3.chunk.js",
-    "static/css/main.81a97add.chunk.css",
-    "static/js/main.24d3e41d.chunk.js"
+    "static/css/main.6172806a.chunk.css",
+    "static/js/main.3001290a.chunk.js"
   ]
 }
