@@ -1,16 +1,21 @@
+.hockeypunk{ 
+display: flex;
+flex-wrap: wrap;
+justify-content:inherit;
+
+}
+
 .block{
     height: 30px;
     width: 50px;
-    float: left;    
+   
+
+
     
 }
 .punk {
     height: 30px;
     width: 30px;
+}
 
-}
-.hockeypunk{
-    margin-left: 3%;
-    margin-right: 3%;
-}
 

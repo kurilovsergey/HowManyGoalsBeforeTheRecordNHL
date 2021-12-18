@@ -7,8 +7,8 @@ export const HockeyPunk = (props) => {
  return (
   <>
   <div className={s.hockeypunk}>
-      {arr.map((i) =>
-       <div className={s.block} key={i}>
+      {arr.map((i, index) =>
+       <div className={s.block} key={index}>
           <img className={s.punk} src={hockey_puck}/>
       </div>)}
   </div>

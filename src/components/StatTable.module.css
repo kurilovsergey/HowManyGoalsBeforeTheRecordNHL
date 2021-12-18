@@ -1,11 +1,12 @@
 .table {
-	width: 60%;
+	width: 50%;
 	margin-bottom: 10px;
 	border: 1px solid #dddddd;
 	border-collapse: collapse;
     color:black; 
     font-size: 18px;
-    margin-top: 2%;
+    margin-top: 1%;
+	margin-left: 0.5%;
 }
 .table th {
 	font-weight: bold;
@@ -21,7 +22,8 @@
 
 .Ovi{
     font-weight: bold;
-    background-color: #CF132B;
+    background-color: #00214D;
+	color: red;
 }
 
 

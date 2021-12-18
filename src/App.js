@@ -15,22 +15,20 @@ function App() {
   let startGames = 1197;
   let CurrentSeason = "20212022"
   
-  
-  let isRuss = false;
+  let isRuss = false
 
   useEffect(()=> {
   
   //опрелеяю язык браузера
-  if ((navigator.language || navigator.userLanguage).includes('ru')) { isRuss = true }
+  if ((navigator.language || navigator.userLanguage).includes('ru')) { 
+    isRuss = true
+  }
   
-  // console.log('lang = ',lang.includes('ru'))
-
 
   axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=statsSingleSeason&season='+CurrentSeason)
   .then(function (response) {
     setOviGoals(startGoal+response.data.stats[0].splits[0].stat.goals)
     setOviGames(startGames+response.data.stats[0].splits[0].stat.games)
-
   })
   
 
@@ -51,7 +49,6 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
   let [goalOvi, setOviGoals] = useState(null)
   let [gamesOvi, setOviGames] = useState(null)
   let [LastGoal, setDateLastGoal] = useState({date: null,  goals: null})
-  
   
   
   let difference = goalGretsky - goalOvi
