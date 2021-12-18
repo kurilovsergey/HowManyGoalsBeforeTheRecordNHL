@@ -5,6 +5,7 @@ export const StatTable = (props) => {
     let PlayersStat = [
         {
             player: "Wayne Gretzky",
+            player_russ: "Уэйн Гретцки",
             // teams: "EDM, LAK, STL, NYR",
             gp: "1487",
             goals: "894",
@@ -13,6 +14,7 @@ export const StatTable = (props) => {
         },
         {
             player: "Gordie Howe",
+            player_russ: "Горди Хоу",
             // teams: "DET, HFD",
             gp: "1767",
             goals: "801",
@@ -21,6 +23,7 @@ export const StatTable = (props) => {
         },
         {
             player: "Jaromir Jagr",
+            player_russ: "Яромир Ягр",
             // teams: "PIT, WSH, NYR, PHI, DAL, BOS, NJD, FLA, CGY",
             gp: "1733",
             goals: "766",
@@ -29,14 +32,16 @@ export const StatTable = (props) => {
         },
         {
             player: "Alex Ovechkin",
+            player_russ: "Александр Овечкин",
             // teams: "WSH",
             gp: props.gamesOvi,
-            goals: "801",
+            goals: props.goalOvi,
             country: "🇷🇺",
             rank: 0
         },
         {
             player: "Brett Hull",
+            player_russ: "Бретт Халл",
             // teams: "CGY, STL, DAL, DET, PHX",
             gp: 1269,
             goals: 741,
@@ -62,27 +67,37 @@ export const StatTable = (props) => {
 
     PlayersStat.sort((a, b) => a.goals < b.goals ? 1 : -1);
     Rank();
-    
+
 
     return (
         <>
             <table className={s.table}>
                 <thead>
-                    <tr>
-                        <th>RANK</th>
-                        <th>PLAYER</th>
-                        {/* <th>TEAM(S)</th> */}
-                        <th>GP</th>
-                        <th>GOALS</th>
-                        <th>COUNTRY</th>
-                    </tr>
+                    {props.isRuss ?
+                        <tr>
+                            <th>{"№"}</th>
+                            <th>{"Игрок" }</th>
+                            {/* <th>TEAM(S)</th> */}
+                            <th>{"Игр"}</th>
+                            <th>{"Шайб"}</th>
+                            <th>{"Страна"}</th>
+                        </tr> :
+                        <tr>
+                            <th>{"RANK"}</th>
+                            <th>{"PLAYER"}</th>
+                            {/* <th>TEAM(S)</th> */}
+                            <th>{"GP"}</th>
+                            <th>{"GOALS"}</th>
+                            <th>{"COUNTRY"}</th>
+                        </tr>
+                    }
                 </thead>
                 <tbody>
 
                     {PlayersStat.map((i, index) =>
                         <tr key={index} className={i.player == "Alex Ovechkin" ? s.Ovi : null}>
                             <td>{i.rank}</td>
-                            <td>{i.player}</td>
+                            <td>{props.isRuss ? i.player_russ : i.player}</td>
                             {/* <td>{i.teams}</td> */}
                             <td>{i.gp}</td>
                             <td>{i.goals}</td>

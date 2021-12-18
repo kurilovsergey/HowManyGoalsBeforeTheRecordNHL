@@ -15,13 +15,17 @@ function App() {
   let startGames = 1197;
   let CurrentSeason = "20212022"
   
-  let isRuss = false
+  //let isRuss = false
 
   useEffect(()=> {
   
   //опрелеяю язык браузера
-  if ((navigator.language || navigator.userLanguage).includes('ru')) { 
-    isRuss = true
+  var language = navigator.languages && navigator.languages[0] || // Chrome / Firefox
+               navigator.language ||   // All browsers
+               navigator.userLanguage;
+  if (language.includes('ru')) { 
+
+    setRuss(true)
   }
   
 
@@ -49,7 +53,7 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
   let [goalOvi, setOviGoals] = useState(null)
   let [gamesOvi, setOviGames] = useState(null)
   let [LastGoal, setDateLastGoal] = useState({date: null,  goals: null})
-  
+  let [isRuss, setRuss] = useState(false)
   
   let difference = goalGretsky - goalOvi
 
@@ -63,7 +67,7 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
         <Logo/>
         <Counter isRuss={isRuss} difference={difference}/>
         <HockeyPunk difference={difference}/>
-        <StatTable goalOvi={goalOvi} gamesOvi={gamesOvi}/>
+        <StatTable isRuss={isRuss} goalOvi={goalOvi} gamesOvi={gamesOvi}/>
         <ScoresToday LastGoal={LastGoal}/>
       </main>
       <footer className="footer">

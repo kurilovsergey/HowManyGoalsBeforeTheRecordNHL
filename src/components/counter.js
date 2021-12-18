@@ -4,7 +4,7 @@ import s from './Counter.module.css'
 
 export const Counter = (props) => {
     const [num, setNum] = useState(props.difference);
-    const [leng, setLeng] = useState(props.isEng);
+   
     
     //функция склоняет цислительные
     function num_word(value){ 
@@ -22,22 +22,18 @@ export const Counter = (props) => {
       [props.difference]
     );
 
-    useEffect(() => {
-      setLeng(props.isEng)},
-      [props.isEng]
-    );
 
     
     
  return (
   <div className={s.counter}>
   <h1>
-    {props.isRuss ? "Ovechkin needs" : "Овечкину осталось забить"}
+    {props.isRuss ?  "Овечкину осталось забить" : "Ovechkin needs" }
   </h1>
     <div className={s.flip}><Flip  value={num} /></div>
   <h1>
-   {props.isRuss ? "goals to climb NHL all time high scoring record" 
-   : num_word(num) + " до звания лучшего снайпера в истории НХЛ"}
+   {props.isRuss ? num_word(num) + " до звания лучшего снайпера в истории НХЛ" 
+   :  "goals to climb NHL all time high scoring record"}
    
   </h1>
   </div>
