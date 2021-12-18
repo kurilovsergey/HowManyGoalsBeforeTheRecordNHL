@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.b3fbe5c4.chunk.css",
-    "main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.cb1721fc.chunk.js",
-    "main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.cb1721fc.chunk.js.map",
+    "main.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.9dffa9b7.chunk.css",
+    "main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.a4495091.chunk.js",
+    "main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.a4495091.chunk.js.map",
     "runtime-main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/runtime-main.d03ab0fc.js",
     "runtime-main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/runtime-main.d03ab0fc.js.map",
     "static/css/2.f45cf02a.chunk.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/2.f45cf02a.chunk.css",
@@ -12,16 +12,16 @@
     "static/js/3.feb60a80.chunk.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/3.feb60a80.chunk.js.map",
     "index.html": "/HowManyGoalsBeforeTheRecordNHL/index.html",
     "static/css/2.f45cf02a.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/2.f45cf02a.chunk.css.map",
-    "static/css/main.b3fbe5c4.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.b3fbe5c4.chunk.css.map",
+    "static/css/main.9dffa9b7.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.9dffa9b7.chunk.css.map",
     "static/js/2.64f4edb3.chunk.js.LICENSE.txt": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.64f4edb3.chunk.js.LICENSE.txt",
-    "static/media/NHL_logo.adaa40a4.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/NHL_logo.adaa40a4.png",
-    "static/media/WC_logo.aea12137.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/WC_logo.aea12137.png"
+    "static/media/NHL_logo.7e954d38.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/NHL_logo.7e954d38.png",
+    "static/media/WC_logo.a80cfa70.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/WC_logo.a80cfa70.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d03ab0fc.js",
     "static/css/2.f45cf02a.chunk.css",
     "static/js/2.64f4edb3.chunk.js",
-    "static/css/main.b3fbe5c4.chunk.css",
-    "static/js/main.cb1721fc.chunk.js"
+    "static/css/main.9dffa9b7.chunk.css",
+    "static/js/main.a4495091.chunk.js"
   ]
 }
