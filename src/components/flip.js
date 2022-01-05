@@ -30,11 +30,11 @@ export class Flip extends React.Component {
 
   render() {
     return (
-      <div ref={this._tickRef} className="tick">
-        <div data-repeat="true" aria-hidden="true">
+      <span ref={this._tickRef} className="tick">
+        <span data-repeat="true" aria-hidden="true">
           <span data-view="flip">Tick</span>
-        </div>
-      </div>
+        </span>
+      </span>
     );
   }
 }

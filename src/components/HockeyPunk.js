@@ -9,7 +9,7 @@ export const HockeyPunk = (props) => {
   <div className={s.hockeypunk}>
       {arr.map((i, index) =>
        <div className={s.block} key={index}>
-          <img className={s.punk} src={hockey_puck}/>
+          <img className={s.punk} src={hockey_puck} alt="puck"/>
       </div>)}
   </div>
   </>

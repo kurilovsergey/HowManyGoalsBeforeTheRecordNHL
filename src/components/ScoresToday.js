@@ -12,8 +12,8 @@ export const ScoresToday = (props) => {
 
   //определяю текущую дату до формата 2021-02-02
   let currentDate = new Date().toISOString().slice(0, 10) 
-  console.log(lastScore.date)
-  console.log(currentDate)
+  // console.log(lastScore.date)
+  // console.log(currentDate)
 
  return (
   <>

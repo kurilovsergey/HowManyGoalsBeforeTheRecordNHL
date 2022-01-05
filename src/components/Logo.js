@@ -3,8 +3,7 @@ import WC_logo from './assets/WC_logo.png'
 import s from './Logo.module.css'
 
 export const Logo = () => {
-    
-    
+   
  return (
   <>
     <div className={s.logo_block}>

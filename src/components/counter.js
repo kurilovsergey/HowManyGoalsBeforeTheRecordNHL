@@ -23,18 +23,14 @@ export const Counter = (props) => {
     );
 
 
-    
-    
+
  return (
   <div className={s.counter}>
   <h1>
     {props.isRuss ?  "Овечкину осталось забить" : "Ovechkin needs" }
-  </h1>
-    <div className={s.flip}><Flip  value={num} /></div>
-  <h1>
-   {props.isRuss ? num_word(num) + " до звания лучшего снайпера в истории НХЛ" 
+  <br/><span className={s.flip}><Flip value={num} /></span>
+  <br/>{props.isRuss ? num_word(num) + " до звания лучшего бомбардира в истории НХЛ" 
    :  "goals to climb NHL all time high scoring record"}
-   
   </h1>
   </div>
  )

@@ -83,7 +83,7 @@ export const StatTable = (props) => {
                             <th>{"Страна"}</th>
                         </tr> :
                         <tr>
-                            <th>{"RANK"}</th>
+                            <th>{"№"}</th>
                             <th>{"PLAYER"}</th>
                             {/* <th>TEAM(S)</th> */}
                             <th>{"GP"}</th>
@@ -93,14 +93,13 @@ export const StatTable = (props) => {
                     }
                 </thead>
                 <tbody>
-
                     {PlayersStat.map((i, index) =>
                         <tr key={index} className={i.player == "Alex Ovechkin" ? s.Ovi : null}>
                             <td>{i.rank}</td>
                             <td>{props.isRuss ? i.player_russ : i.player}</td>
                             {/* <td>{i.teams}</td> */}
                             <td>{i.gp}</td>
-                            <td>{i.goals}</td>
+                            <td>{i.goals}({i.goals-props.goalOvi})</td>
                             <td>{i.country}</td>
                         </tr>
                     )}
