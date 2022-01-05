@@ -1,7 +1,9 @@
 .flip{
-  font-size:200%;
+  font-size:400%;
   font-weight: bold;
   margin-top: 2%;
   margin-bottom: 2%;
   }
   
+  h2 {font-size:50px !important;
+     }
