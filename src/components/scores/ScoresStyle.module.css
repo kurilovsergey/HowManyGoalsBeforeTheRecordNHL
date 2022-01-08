@@ -1,0 +1,45 @@
+.card{
+  height: 180px;
+  width: 300px;
+  
+  border-radius: 10px;
+  background: rgba(252, 252, 252, 0.166);
+  margin: 10px;
+  
+}
+
+
+
+.info{
+  color: white;
+  padding: 10px;
+
+}
+
+.logo{
+    height: 40px;
+    width: 40px;
+}
+
+.punk{
+  height: 30px;
+  width: 30px;
+  transform: rotate(90deg)
+}
+
+.data{
+font-size: 15px;
+}
+
+.gameScore{
+  font-size: 35px;
+}
+
+.score{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . ."; 
+}

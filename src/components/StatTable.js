@@ -1,6 +1,8 @@
 import s from './StatTable.module.css'
+import React, { useState, useEffect } from 'react';
 
 export const StatTable = (props) => {
+
 
     let PlayersStat = [
         {
@@ -50,7 +52,7 @@ export const StatTable = (props) => {
         }
     ];
 
-
+    //проставление индекстов для таблицы
     let Rank = () => {
         let i = 1;
 
@@ -64,8 +66,10 @@ export const StatTable = (props) => {
         }
         )
     }
-
+    
+    //сортировка по голом
     PlayersStat.sort((a, b) => a.goals < b.goals ? 1 : -1);
+
     Rank();
 
 
@@ -82,7 +86,7 @@ export const StatTable = (props) => {
                             <th>{"Шайб"}</th>
                             <th>{"Страна"}</th>
                         </tr> :
-                        <tr>
+                        <tr> 
                             <th>{"№"}</th>
                             <th>{"PLAYER"}</th>
                             {/* <th>TEAM(S)</th> */}
@@ -99,7 +103,7 @@ export const StatTable = (props) => {
                             <td>{props.isRuss ? i.player_russ : i.player}</td>
                             {/* <td>{i.teams}</td> */}
                             <td>{i.gp}</td>
-                            <td>{i.goals}({i.goals-props.goalOvi})</td>
+                            <td>{i.goals}{i.goals-props.goalOvi>0 ? <span className={s.delta}> (+{i.goals-props.goalOvi})</span> : i.goals-props.goalOvi<0 ? " ✅" : null }</td>
                             <td>{i.country}</td>
                         </tr>
                     )}

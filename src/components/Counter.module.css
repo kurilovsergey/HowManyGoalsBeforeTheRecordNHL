@@ -4,6 +4,13 @@
   margin-top: 2%;
   margin-bottom: 2%;
   }
+
+  h1 {
+    font-size: 2em !important;
+    margin-bottom: 0%;
+    margin-top: 2%;}
   
-  h2 {font-size:50px !important;
-     }
+  h2 {font-size:2em !important;
+     margin-bottom: 2%;
+     margin-top: 0%;}
+
