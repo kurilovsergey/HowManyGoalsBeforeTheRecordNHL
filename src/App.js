@@ -41,19 +41,15 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
 .then((response) => {
   let data = response;
   console.log(data);
-  setDateLastGoal(
-    {...LastGoal, 
-    date: data.data.stats[0].splits[0].date,
-    goals: data.data.stats[0].splits[0].stat.goals})
-    })
-
+  setDateLastGoal(data.data.stats[0].splits);
+});
   },[])
  
   const goalGretsky = 894;
 
   let [goalOvi, setOviGoals] = useState(null)
   let [gamesOvi, setOviGames] = useState(null)
-  let [LastGoal, setDateLastGoal] = useState({date: null,  goals: null})
+  let [LastGoal, setDateLastGoal] = useState(null)
   let [isRuss, setRuss] = useState(false)
 
   //функция склоняет цислительные
@@ -89,7 +85,7 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
         <Logo/>
         <Counter isRuss={isRuss} difference={difference} num_word={num_word}/>
         <HockeyPunk difference={difference}/>
-        <ScoresToday isRuss={isRuss} num_word={num_word} LastGoal={LastGoal}/>
+        <ScoresToday isRuss={isRuss} num_word={num_word} LastGoal={LastGoal} />
         <StatTable isRuss={isRuss} goalOvi={goalOvi} gamesOvi={gamesOvi}/>
       </main>
       <footer className="footer">

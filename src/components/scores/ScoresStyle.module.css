@@ -1,5 +1,5 @@
 .card{
-  height: 180px;
+  height: 100%;
   width: 300px;
   
   border-radius: 10px;
@@ -24,7 +24,8 @@
 .punk{
   height: 30px;
   width: 30px;
-  transform: rotate(90deg)
+  transform: rotate(90deg);
+ 
 }
 
 .data{
