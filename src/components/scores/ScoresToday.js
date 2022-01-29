@@ -12,15 +12,15 @@ export const ScoresToday = (props) => {
 
 
 
-  const [lastScore, setLastScore] = useState(props.LastGoal);
-  const [lastGoal, setLastGoal] = useState(null)
+  const [lastScore, setLastScore] = useState(props.allGame);
+ 
   
   
 
   React.useEffect(() => {
-    setLastScore(props.LastGoal);
+    setLastScore(props.allGame);
     if (lastScore)  findLastGoal(lastScore);
-  }, [props.LastGoal])
+  }, [props.allGame])
 
 
 
@@ -30,7 +30,7 @@ export const ScoresToday = (props) => {
   // console.log(currentDate)
 
   const findLastGoal = (array) => {
-    setLastGoal(()=>array.find((i) => i.stat.goals>0));
+
    }
 
   
@@ -40,18 +40,18 @@ export const ScoresToday = (props) => {
   props.isRuss ?  
   <div >
    <div className={s.widgets}>
-  <LastScores LastGoal={props.LastGoal}/>
-  <LastGame/>
+  <LastScores  IDLastGameWithGolas={props.IDLastGameWithGolas} aboutLastGameWithGolas={props.aboutLastGameWithGolas}/>
+  <LastGame  IDLastGameGolas={props.IDLastGameGolas} aboutLastGame={props.aboutLastGame}/>
   <NextGame/>
 
   </div>
-   {lastScore[0].date==currentDate || lastScore[0].goal>0 ? <div>Ovechkin scored {lastScore[0].goal} goal(s) today!</div> : null}
-   {lastScore[0].date==currentDate-1 || lastScore[0].goal>0 ? <div>Ovechkin scored {lastScore[0].goal} goal(s) yesterday!</div> : null}
+   {/* {lastScore[0].date==currentDate || lastScore[0].goal>0 ? <div>Ovechkin scored {lastScore[0].goal} goal(s) today!</div> : null}
+   {lastScore[0].date==currentDate-1 || lastScore[0].goal>0 ? <div>Ovechkin scored {lastScore[0].goal} goal(s) yesterday!</div> : null} */}
   </div>
   : 
   <div className={s.scorestoday}>
-  {lastScore[0].date==currentDate || lastScore[0].goal>0 ? <div>Овечкин сегодня забил {lastScore[0].goal} {props.num_word(lastScore[0].goal)}!</div> : null}
-  {lastScore[0].date==currentDate-1 || lastScore[0].goal>0 ? <div>Овечкин вчера забил {lastScore[0].goal} {props.num_word(lastScore[0].goal)}!</div> : null} 
+  {/* {lastScore[0].date==currentDate || lastScore[0].goal>0 ? <div>Овечкин сегодня забил {lastScore[0].goal} {props.num_word(lastScore[0].goal)}!</div> : null}
+  {lastScore[0].date==currentDate-1 || lastScore[0].goal>0 ? <div>Овечкин вчера забил {lastScore[0].goal} {props.num_word(lastScore[0].goal)}!</div> : null}  */}
   </div> : <>loading...</>
  ) 
 }

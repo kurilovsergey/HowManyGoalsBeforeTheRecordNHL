@@ -1,5 +1,5 @@
 import './App.css';
-import {Counter} from './components/Counter'
+import {Counter} from './components/Counter.js'
 import {HockeyPunk} from './components/HockeyPunk'
 import {Logo} from './components/Logo'
 import {StatTable} from './components/StatTable'
@@ -15,6 +15,19 @@ function App() {
   let startGoal = 730;
   let startGames = 1197;
   let CurrentSeason = "20212022"
+
+  const goalGretsky = 894;
+
+  let [goalOvi, setOviGoals] = useState(null) //голы овечкина в текущем сезона
+  let [gamesOvi, setOviGames] = useState(null) //голы овечкина в текущем сезона
+  let [allGame, setAllGame] = useState(null)  //данные о играх овечкина в текущем сезона
+  let [isRuss, setRuss] = useState(false) //язык 
+
+  let [IDLastGameWithGolas, setIdLastGameWithGolas] = useState(null) // id игры с последним голом
+  let [aboutLastGameWithGolas, setAboutLastGameWithGolas] = useState(null) // данные игры с последним голом
+
+  let [IDLastGameGolas, setIdLastWithGolas] = useState(null) // id игры с последним голом
+  let [aboutLastGame, setAboutLastGame] = useState(null) // данные игры с последним голом
   
   //let isRuss = false
 
@@ -29,28 +42,38 @@ function App() {
     setRuss(true)
   }
   
-
+// запрос на количество голов в текущем созоне и количество игр
   axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=statsSingleSeason&season='+CurrentSeason)
   .then(function (response) {
     setOviGoals(startGoal+response.data.stats[0].splits[0].stat.goals)
     setOviGames(startGames+response.data.stats[0].splits[0].stat.games)
   })
   
-
+//запрос на массив игр в текущем сезоне
 axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLog&season='+CurrentSeason)
 .then((response) => {
   let data = response;
-  console.log(data);
-  setDateLastGoal(data.data.stats[0].splits);
+  //console.log(data);
+  
+  
+
+  setAllGame(data);
+  
+  let Game = data.data.stats[0].splits.find(i => i.stat.goals>0);
+
+  setAboutLastGameWithGolas(Game)
+  setIdLastGameWithGolas(Game.game.gamePk);
+
+  setIdLastWithGolas(data.data.stats[0].splits[0].game.gamePk)
+  setAboutLastGame(data.data.stats[0].splits[0])
+
+
 });
   },[])
  
-  const goalGretsky = 894;
 
-  let [goalOvi, setOviGoals] = useState(null)
-  let [gamesOvi, setOviGames] = useState(null)
-  let [LastGoal, setDateLastGoal] = useState(null)
-  let [isRuss, setRuss] = useState(false)
+  
+
 
   //функция склоняет цислительные
   let num_word = (value) => { 
@@ -85,7 +108,8 @@ axios.get('https://statsapi.web.nhl.com/api/v1/people/8471214/stats?stats=gameLo
         <Logo/>
         <Counter isRuss={isRuss} difference={difference} num_word={num_word}/>
         <HockeyPunk difference={difference}/>
-        <ScoresToday isRuss={isRuss} num_word={num_word} LastGoal={LastGoal} />
+        <ScoresToday isRuss={isRuss} num_word={num_word} allGame={allGame} IDLastGameWithGolas={IDLastGameWithGolas} aboutLastGameWithGolas={aboutLastGameWithGolas}
+        IDLastGameGolas={IDLastGameGolas} aboutLastGame={aboutLastGame}/>
         <StatTable isRuss={isRuss} goalOvi={goalOvi} gamesOvi={gamesOvi}/>
       </main>
       <footer className="footer">
