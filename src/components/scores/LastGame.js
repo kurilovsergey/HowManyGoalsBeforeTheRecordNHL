@@ -16,8 +16,10 @@ export const LastGame = (props) => {
    
     
   if (props.IDLastGameGolas) {
-     axios.get(`https://statsapi.web.nhl.com/api/v1/game/${props.IDLastGameGolas}/boxscore`)
+      //`https://api-web.nhle.com/v1/gamecenter/${props.IDLastGameGolas}/play-by-play\`
+     axios.get(`https://api-web.nhle.com/v1/gamecenter/${props.IDLastGameGolas}/play-by-play`)
 .then((response) => {
+
   let data = response;
   
   setAboutGame(data)
@@ -28,30 +30,27 @@ export const LastGame = (props) => {
    }, [props.IDLastGameGolas]);
 
  
-  
-  
 
- 
-
-     
+   
 return (
-  aboutGame ?
+    aboutGame ?
 <div className={s.card}>
 <div className={s.info}>
-Последний гол
+Последняя игра
 <hr/>
 <div>
-<div className={s.data}>{props.aboutLastGame.date}</div>
-<div className={s.score}>
-<div><img className={s.logo} alt="logo washington capitals" src={WC_logo}/></div>
-<div className={s.gameScore}>{aboutGame.data.teams.home.teamStats.teamSkaterStats.goals} : {aboutGame.data.teams.away.teamStats.teamSkaterStats.goals}</div>
-<div><img className={s.logo} alt="logo washington capitals" src={WC_logo}/></div>
+<div className={s.data}>{aboutGame.data.gameDate}</div>
+<div className={s.score}> 
+<div>{props.findLogo(aboutGame.data.homeTeam.id)}</div>
+<div className={s.gameScore}>{aboutGame.data.homeTeam.score} : {aboutGame.data.awayTeam.score}</div>
+<div>{props.findLogo(aboutGame.data.awayTeam.id)}</div>
+</div>
+
 </div>
 </div>
-</div>
-<div>
-{props.aboutLastGame.stat.goals ? new Array(props.aboutLastGame.stat.goals).fill({}).map((i, index) =>  <img className={s.punk} src={hockey_puck} alt="puck"/>) : <div className={s.resault}>Ови не забил</div>} 
-</div>
+{/*<div>*/}
+{/*{props.aboutLastGame.stat.goals ? new Array(props.aboutLastGame.stat.goals).fill({}).map((i, index) =>  <img key={index} className={s.punk} src={hockey_puck} alt="puck"/>) : <div className={s.vidgetInfo}>Ови не забил</div>} */}
+{/*</div>*/}
 </div> : <div>"loading"</div>
      )
     }

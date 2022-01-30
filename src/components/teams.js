@@ -1,5 +1,8 @@
-let teams = [ {
+import Duck from './assets/nhl_logo/Ducks.png'
+
+export let teams = [ {
     "id" : 1,
+    // "img": './assets/nhl_logo/Ducks.png',
     "name" : "New Jersey Devils",
     "link" : "/api/v1/teams/1",
     "venue" : {
@@ -371,7 +374,7 @@ let teams = [ {
       }
     },
     "abbreviation" : "TOR",
-    "teamName" : "Maple Leafs",
+    "teamName" : "MapleLeafs",
     "locationName" : "Toronto",
     "firstYearOfPlay" : "1917",
     "division" : {
@@ -388,7 +391,7 @@ let teams = [ {
     },
     "franchise" : {
       "franchiseId" : 5,
-      "teamName" : "Maple Leafs",
+      "teamName" : "MapleLeafs",
       "link" : "/api/v1/franchises/5"
     },
     "shortName" : "Toronto",
@@ -610,7 +613,7 @@ let teams = [ {
       }
     },
     "abbreviation" : "DET",
-    "teamName" : "Red Wings",
+    "teamName" : "RedWings",
     "locationName" : "Detroit",
     "firstYearOfPlay" : "1926",
     "division" : {
@@ -627,7 +630,7 @@ let teams = [ {
     },
     "franchise" : {
       "franchiseId" : 12,
-      "teamName" : "Red Wings",
+      "teamName" : "RedWings",
       "link" : "/api/v1/franchises/12"
     },
     "shortName" : "Detroit",
@@ -1034,7 +1037,7 @@ let teams = [ {
     "active" : true
   }, {
     "id" : 29,
-    "name" : "Columbus Blue Jackets",
+    "name" : "ColumbusBlueJackets",
     "link" : "/api/v1/teams/29",
     "venue" : {
       "id" : 5059,
@@ -1048,7 +1051,7 @@ let teams = [ {
       }
     },
     "abbreviation" : "CBJ",
-    "teamName" : "Blue Jackets",
+    "teamName" : "BlueJackets",
     "locationName" : "Columbus",
     "firstYearOfPlay" : "1997",
     "division" : {
@@ -1208,7 +1211,7 @@ let teams = [ {
       }
     },
     "abbreviation" : "VGK",
-    "teamName" : "Golden Knights",
+    "teamName" : "GoldenKnights",
     "locationName" : "Vegas",
     "firstYearOfPlay" : "2016",
     "division" : {
@@ -1225,7 +1228,7 @@ let teams = [ {
     },
     "franchise" : {
       "franchiseId" : 38,
-      "teamName" : "Golden Knights",
+      "teamName" : "GoldenKnights",
       "link" : "/api/v1/franchises/38"
     },
     "shortName" : "Vegas",
@@ -1234,7 +1237,7 @@ let teams = [ {
     "active" : true
   }, {
     "id" : 55,
-    "name" : "Seattle Kraken",
+    "name" : "SeattleKraken",
     "link" : "/api/v1/teams/55",
     "venue" : {
       "name" : "Climate Pledge Arena",
