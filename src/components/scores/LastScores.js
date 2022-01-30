@@ -27,12 +27,6 @@ export const LastScores = (props) => {
    
    }, [props.IDLastGameWithGolas]);
 
-
-  
-  
-
- 
-
      
 return (
   aboutGame ?
@@ -43,9 +37,9 @@ return (
 <div>
 <div className={s.data}>{props.aboutLastGameWithGolas.date}</div>
 <div className={s.score}>
-<div><img className={s.logo} alt="logo washington capitals" src={WC_logo}/></div>
+<div>{props.findLogo(aboutGame.data.teams.home.team.id)}</div>
 <div className={s.gameScore}>{aboutGame.data.teams.home.teamStats.teamSkaterStats.goals} : {aboutGame.data.teams.away.teamStats.teamSkaterStats.goals}</div>
-<div><img className={s.logo} alt="logo washington capitals" src={WC_logo}/></div>
+<div>{props.findLogo(aboutGame.data.teams.away.team.id)}</div>
 </div>
 </div>
 </div>

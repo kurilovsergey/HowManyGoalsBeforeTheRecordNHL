@@ -1,5 +1,5 @@
 .card{
-  height: 100%;
+  
   width: 300px;
   
   border-radius: 10px;
@@ -25,7 +25,7 @@
   height: 30px;
   width: 30px;
   transform: rotate(90deg);
- 
+  
 }
 
 .data{
@@ -45,3 +45,7 @@ font-size: 15px;
     ". . ."; 
 }
 
+.vidgetInfo{
+  font-size: 20px;
+  padding: 10px;
+}

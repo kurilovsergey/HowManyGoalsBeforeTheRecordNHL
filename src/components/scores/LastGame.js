@@ -28,29 +28,26 @@ export const LastGame = (props) => {
    }, [props.IDLastGameGolas]);
 
  
-  
-  
 
- 
-
-     
+   
 return (
   aboutGame ?
 <div className={s.card}>
 <div className={s.info}>
-Последний гол
+Последняя игра
 <hr/>
 <div>
 <div className={s.data}>{props.aboutLastGame.date}</div>
-<div className={s.score}>
-<div><img className={s.logo} alt="logo washington capitals" src={WC_logo}/></div>
+<div className={s.score}> 
+<div>{props.findLogo(aboutGame.data.teams.home.team.id)}</div>
 <div className={s.gameScore}>{aboutGame.data.teams.home.teamStats.teamSkaterStats.goals} : {aboutGame.data.teams.away.teamStats.teamSkaterStats.goals}</div>
-<div><img className={s.logo} alt="logo washington capitals" src={WC_logo}/></div>
+<div>{props.findLogo(aboutGame.data.teams.away.team.id)}</div>
 </div>
+
 </div>
 </div>
 <div>
-{props.aboutLastGame.stat.goals ? new Array(props.aboutLastGame.stat.goals).fill({}).map((i, index) =>  <img className={s.punk} src={hockey_puck} alt="puck"/>) : <div className={s.resault}>Ови не забил</div>} 
+{props.aboutLastGame.stat.goals ? new Array(props.aboutLastGame.stat.goals).fill({}).map((i, index) =>  <img key={index} className={s.punk} src={hockey_puck} alt="puck"/>) : <div className={s.vidgetInfo}>Ови не забил</div>} 
 </div>
 </div> : <div>"loading"</div>
      )

@@ -5,11 +5,18 @@ import {LastScores} from './LastScores.js'
 import {LastGame} from './LastGame.js'
 import {NextGame} from './NextGame.js'
 import s from './ScoresToday.module.css'
+import {teams} from '../teams';
 
 
 export const ScoresToday = (props) => {
 
+  const addImage = () => {
+    teams.forEach(function (element) {
+       element.img = require(`../assets/nhl_logo/${element.teamName}.png`).default;
+     });
+  }
 
+  addImage();
 
 
   const [lastScore, setLastScore] = useState(props.allGame);
@@ -19,7 +26,7 @@ export const ScoresToday = (props) => {
 
   React.useEffect(() => {
     setLastScore(props.allGame);
-    if (lastScore)  findLastGoal(lastScore);
+  
   }, [props.allGame])
 
 
@@ -33,6 +40,10 @@ export const ScoresToday = (props) => {
 
    }
 
+   const findLogo = (ID) => {
+    return <img className={s.logo} src={teams[teams.indexOf(teams.find(i => i.id==ID))].img}/> 
+ }
+
   
 
  return (
@@ -40,10 +51,9 @@ export const ScoresToday = (props) => {
   props.isRuss ?  
   <div >
    <div className={s.widgets}>
-  <LastScores  IDLastGameWithGolas={props.IDLastGameWithGolas} aboutLastGameWithGolas={props.aboutLastGameWithGolas}/>
-  <LastGame  IDLastGameGolas={props.IDLastGameGolas} aboutLastGame={props.aboutLastGame}/>
-  <NextGame/>
-
+  <LastScores  IDLastGameWithGolas={props.IDLastGameWithGolas} aboutLastGameWithGolas={props.aboutLastGameWithGolas} teams={teams} findLogo={findLogo}/>
+  <LastGame  IDLastGameGolas={props.IDLastGameGolas} aboutLastGame={props.aboutLastGame} teams={teams} findLogo={findLogo}/>
+  <NextGame findLogo={findLogo}/>
   </div>
    {/* {lastScore[0].date==currentDate || lastScore[0].goal>0 ? <div>Ovechkin scored {lastScore[0].goal} goal(s) today!</div> : null}
    {lastScore[0].date==currentDate-1 || lastScore[0].goal>0 ? <div>Ovechkin scored {lastScore[0].goal} goal(s) yesterday!</div> : null} */}
