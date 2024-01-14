@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.1a6f210e.chunk.css",
-    "main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.26823d01.chunk.js",
-    "main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.26823d01.chunk.js.map",
+    "main.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.6c6c1fc4.chunk.css",
+    "main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.93c75aef.chunk.js",
+    "main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/main.93c75aef.chunk.js.map",
     "runtime-main.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/runtime-main.ee42df57.js",
     "runtime-main.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/runtime-main.ee42df57.js.map",
     "static/css/2.f45cf02a.chunk.css": "/HowManyGoalsBeforeTheRecordNHL/static/css/2.f45cf02a.chunk.css",
-    "static/js/2.8a8d9210.chunk.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.8a8d9210.chunk.js",
-    "static/js/2.8a8d9210.chunk.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.8a8d9210.chunk.js.map",
+    "static/js/2.503ea2f8.chunk.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.503ea2f8.chunk.js",
+    "static/js/2.503ea2f8.chunk.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.503ea2f8.chunk.js.map",
     "static/js/3.77c90280.chunk.js": "/HowManyGoalsBeforeTheRecordNHL/static/js/3.77c90280.chunk.js",
     "static/js/3.77c90280.chunk.js.map": "/HowManyGoalsBeforeTheRecordNHL/static/js/3.77c90280.chunk.js.map",
     "index.html": "/HowManyGoalsBeforeTheRecordNHL/index.html",
     "static/css/2.f45cf02a.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/2.f45cf02a.chunk.css.map",
-    "static/css/main.1a6f210e.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.1a6f210e.chunk.css.map",
-    "static/js/2.8a8d9210.chunk.js.LICENSE.txt": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.8a8d9210.chunk.js.LICENSE.txt",
+    "static/css/main.6c6c1fc4.chunk.css.map": "/HowManyGoalsBeforeTheRecordNHL/static/css/main.6c6c1fc4.chunk.css.map",
+    "static/js/2.503ea2f8.chunk.js.LICENSE.txt": "/HowManyGoalsBeforeTheRecordNHL/static/js/2.503ea2f8.chunk.js.LICENSE.txt",
     "static/media/ BlackHawks.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/ BlackHawks.3d54b01c.png",
     "static/media/5a50e14b6e23dd9ffe00cd29.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/5a50e14b6e23dd9ffe00cd29.3d54b01c.png",
     "static/media/Avalanche.png": "/HowManyGoalsBeforeTheRecordNHL/static/media/Avalanche.a8ec9c0c.png",
@@ -54,8 +54,8 @@
   "entrypoints": [
     "static/js/runtime-main.ee42df57.js",
     "static/css/2.f45cf02a.chunk.css",
-    "static/js/2.8a8d9210.chunk.js",
-    "static/css/main.1a6f210e.chunk.css",
-    "static/js/main.26823d01.chunk.js"
+    "static/js/2.503ea2f8.chunk.js",
+    "static/css/main.6c6c1fc4.chunk.css",
+    "static/js/main.93c75aef.chunk.js"
   ]
 }
