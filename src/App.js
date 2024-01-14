@@ -124,9 +124,9 @@ axios.get('https://api-web.nhle.com/v1/player/8471214/game-log/now')
         <Logo/>
         <Counter isRuss={isRuss} difference={difference} num_word={num_word}/>
         <HockeyPunk difference={difference}/>
+        {counterMatchWithoutGoal > 3 && <div>Не забивает {counterMatchWithoutGoal} {num_wordMathc(counterMatchWithoutGoal)}</div>}
         <ScoresToday isRuss={isRuss} num_word={num_word} allGame={allGame} IDLastGame={IDLastGame} aboutLastGameGolas={aboutLastGameGolas}
         IDLastGameGolas={IDLastGameGolas} aboutLastGame={aboutLastGame}/>
-        {counterMatchWithoutGoal > 3 && <div>Овечкин не забивает {counterMatchWithoutGoal} {num_wordMathc(counterMatchWithoutGoal)}</div>}
         <StatTable isRuss={isRuss} goalOvi={goalOvi} gamesOvi={gamesOvi}/>
       </main>
       <footer className="footer">
